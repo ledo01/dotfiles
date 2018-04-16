@@ -14,6 +14,8 @@ call plug#end()
 
 set background=dark
 colorscheme palenight
+set number
+set relativenumber
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
