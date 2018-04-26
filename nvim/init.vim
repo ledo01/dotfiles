@@ -10,12 +10,19 @@ call plug#begin('~/.vim/plugged')
 	Plug 'drewtempelmeyer/palenight.vim'
 	Plug 'lervag/vimtex'
 	Plug 'neomake/neomake'
+	Plug 'junegunn/goyo.vim'
 call plug#end()
 
 set background=dark
 colorscheme palenight
 set number
 set relativenumber
+filetype plugin indent on
+set autoindent 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -59,3 +66,26 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+"Split
+set splitbelow
+set splitright
+
+" Replace all is now S
+nnoremap S :%s//g<Left><Left>
+
+" Open corresponding pdf
+map <leader>p :!mupdf <c-r>%<backspace><backspace><backspace>pdf &<CR><CR>
+
+" Autocompletion
+"set wildmode=longest,list,full
+"set wildmenu
+
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+inoremap ( ()<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+inoremap {<Return> {}<Esc>i<Return><Esc>kA<Return>
+autocmd FileType tex,latex inoremap $ $$<Esc>i
+autocmd FileType tex,latex inoremap $$ $$$$<Esc>hi
