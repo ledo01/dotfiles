@@ -22,7 +22,7 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
+set ai
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -86,6 +86,5 @@ inoremap [ []<Esc>i
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
-inoremap {<Return> {}<Esc>i<Return><Esc>kA<Return>
 autocmd FileType tex,latex inoremap $ $$<Esc>i
 autocmd FileType tex,latex inoremap $$ $$$$<Esc>hi
