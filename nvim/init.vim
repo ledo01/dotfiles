@@ -11,6 +11,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'lervag/vimtex'
 	Plug 'neomake/neomake'
 	Plug 'junegunn/goyo.vim'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 call plug#end()
 
 set background=dark
@@ -62,6 +64,12 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+"Snips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 "Split
 set splitbelow
